@@ -26,7 +26,6 @@ public class CardDeliveryTest {
     public void shouldSubmitRequest() {
         $("[placeholder=\"Город\"]").setValue("Москва");
         SelenideElement dateField = $("[placeholder=\"Дата встречи\"]");
-        dateField.click();
         dateField.sendKeys(Keys.CONTROL, "a");
         dateField.sendKeys(Keys.BACK_SPACE);
         String dateOfTesting = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
