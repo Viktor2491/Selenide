@@ -36,7 +36,7 @@ public class CardDeliveryTest {
         $x("//span[@class =\"checkbox__box\"]").click();
         $x("//span[@class =\"button__text\"]").click();
         $("[data-test-id=notification] .notification__content").shouldBe(Condition.visible, ofSeconds(15))
-                .shouldHave(exactText("Встреча успешно забронирована на " + "16.09.2022"));
+                .shouldHave(exactText("Встреча успешно забронирована на " + dateOfTesting));
 
 
     }
